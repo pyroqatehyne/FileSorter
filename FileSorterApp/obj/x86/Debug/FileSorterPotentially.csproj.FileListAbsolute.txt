@@ -1,0 +1,8 @@
+C:\BIN\FileSorter.exe.config
+C:\BIN\FileSorter.exe
+C:\BIN\FileSorter.pdb
+D:\Dropbox\FileSorterApp\FileSorterApp\obj\x86\Debug\FileSorter.Main.resources
+D:\Dropbox\FileSorterApp\FileSorterApp\obj\x86\Debug\FileSorter.Properties.Resources.resources
+D:\Dropbox\FileSorterApp\FileSorterApp\obj\x86\Debug\FileSorterPotentially.csproj.GenerateResource.Cache
+D:\Dropbox\FileSorterApp\FileSorterApp\obj\x86\Debug\FileSorter.exe
+D:\Dropbox\FileSorterApp\FileSorterApp\obj\x86\Debug\FileSorter.pdb
