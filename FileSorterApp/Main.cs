@@ -10,9 +10,6 @@ namespace FileSorter
         readonly FileList<FileData> _sourceFiles;
         readonly ExtensionList<ExtensionData> _extensions;
 
-        //readonly int _destColId, _destColExt, _destColPth, _destBtnPth, _destBtnDel;
-        //readonly int _fileColName, _fileColExt, _fileColPth, _fileColChk, _fileColDest;
-
         public Main()
         {
             InitializeComponent();
@@ -20,18 +17,6 @@ namespace FileSorter
             _sourceFiles = new FileList<FileData>();
             _extensions = new ExtensionList<ExtensionData>("C:\\sets.xml");
             
-            /*_fileColName = gridFiles.Columns.IndexOf(clmnFileName);
-            _fileColExt = gridFiles.Columns.IndexOf(clmnExt);
-            _fileColPth = gridFiles.Columns.IndexOf(clmnSourcePath);
-            _fileColChk = gridFiles.Columns.IndexOf(clmnCheckBox);
-            _fileColDest = gridFiles.Columns.IndexOf(clmnDestPath);
-
-            _destColId = gridDestinations.Columns.IndexOf(clmnID);
-            _destColExt = gridDestinations.Columns.IndexOf(clmnExtension);
-            _destColPth = gridDestinations.Columns.IndexOf(clmnDestFolder);
-            _destBtnPth = gridDestinations.Columns.IndexOf(clmnBtnPath);
-            _destBtnDel = gridDestinations.Columns.IndexOf(clmnBtnRemove);*/
-
             gridDestinations.RowTemplate.Height = Util.ColHeight;
             gridDestinations.CellValueChanged += OnCellvalueChanged;
 
@@ -127,16 +112,6 @@ namespace FileSorter
             _extensions.AddElement(Guid.NewGuid().ToString(), "", "");
             RefreshButtonsCaption();
         }
-
-        /*private void gridFiles_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-              var cell = gridFiles.CurrentCell as DataGridViewCheckBoxCell;
-
-              var i = e.ColumnIndex;
-
-              if (cell == null || cell.Value == null || cell.OwningColumn.Index != _fileColChk) return;
-              cell.Value = cell.Value.ToString() == "False" ? "True" : "False";
-        }*/
 
         //close application on ESCAPE
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
